@@ -4,7 +4,7 @@ const api = require('./api')
 
 const app = express()
 
-app.get('/api', async (req, res) => {
+app.get('/api/weather', async (req, res) => {
   try {
     const { data } = await api(req.query)
     res.json(data)
