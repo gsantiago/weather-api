@@ -1,5 +1,5 @@
 const axios = require('axios')
-const https = require('https');
+const https = require('https')
 
 const httpsAgent = new https.Agent({
   rejectUnauthorized: process.env.NODE_ENV === 'production'
