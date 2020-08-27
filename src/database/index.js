@@ -1,4 +1,5 @@
 const { Client } = require('pg')
+const sql = require('sql-tag')
 
 const client = new Client({
   host: process.env.DB_HOST,
@@ -15,17 +16,17 @@ module.exports = {
     await client.close()
   },
   async createUser ({ email, password }) {
-    const query = `
+    const query = sql`
       INSERT INTO users VALUES(
         DEFAULT,
-        $1,
-        $2,
+        ${email},
+        ${password},
         NOW(),
         NOW()
       ) RETURNING *
     `
 
-    const response = await client.query(query, [email, password])
+    const response = await client.query(query)
 
     return response.rows[0]
   }
