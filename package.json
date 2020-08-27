@@ -1,6 +1,6 @@
 {
   "scripts": {
-    "start": "node ."
+    "start": "node -r dotenv/config app/index.js"
   },
   "dependencies": {
     "axios": "^0.20.0",
