@@ -3,6 +3,14 @@
     "start": "nodemon -r dotenv/config src/app/index.js",
     "prettier": "prettier-standard src/**/*.js"
   },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "src/**/*.js": "npm run prettier"
+  },
   "dependencies": {
     "axios": "^0.20.0",
     "body-parser": "^1.19.0",
@@ -12,6 +20,8 @@
     "pg": "^8.3.2"
   },
   "devDependencies": {
+    "husky": "^4.2.5",
+    "lint-staged": "^10.2.13",
     "prettier-standard": "^16.4.1"
   }
 }
