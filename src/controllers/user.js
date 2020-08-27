@@ -7,8 +7,7 @@ module.exports = {
       const user = await database.createUser(req.body)
       res.json(user)
     } catch (err) {
-      res.statusCode = 500
-      res.send(err.message)
+      next(err)
     } finally {
       await database.close()
     }
