@@ -1,6 +1,6 @@
 {
   "scripts": {
-    "start": "nodemon -r dotenv/config src/app/index.js",
+    "start": "nodemon -r dotenv/config src/index.js",
     "prettier": "prettier-standard src/**/*.js"
   },
   "husky": {

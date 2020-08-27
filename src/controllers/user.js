@@ -1,4 +1,4 @@
-const database = require('../../database')
+const database = require('../database')
 
 module.exports = {
   async create (req, res) {
