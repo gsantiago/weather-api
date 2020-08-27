@@ -14,7 +14,7 @@ module.exports = {
   async close () {
     await client.close()
   },
-  async createUser({ email, password }) {
+  async createUser ({ email, password }) {
     const query = `
       INSERT INTO users VALUES(
         DEFAULT,

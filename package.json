@@ -1,6 +1,7 @@
 {
   "scripts": {
-    "start": "nodemon -r dotenv/config app/index.js"
+    "start": "nodemon -r dotenv/config src/app/index.js",
+    "prettier": "prettier-standard src/**/*.js"
   },
   "dependencies": {
     "axios": "^0.20.0",
@@ -9,5 +10,8 @@
     "express": "^4.17.1",
     "nodemon": "^2.0.4",
     "pg": "^8.3.2"
+  },
+  "devDependencies": {
+    "prettier-standard": "^16.4.1"
   }
 }
